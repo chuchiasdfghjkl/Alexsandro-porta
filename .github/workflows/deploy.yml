@@ -17,10 +17,10 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v2
         with:
-          node-version: 20
+          node-version: '20' # Actualizamos a Node.js 20
 
       - name: Install dependencies
-        uses: bahmutov/npm-install@v1
+        run: npm install # Utilizamos el comando `npm install` en lugar de la acción `bahmutov/npm-install@v1`
 
       - name: Build project
         run: npm run build
