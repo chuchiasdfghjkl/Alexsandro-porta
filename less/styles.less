@@ -1,0 +1,97 @@
+@keyframes "fade-in" {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes "bounce" {
+	0% {
+		transform: scale(0.1);
+		opacity: 0;
+	}
+	60% {
+		transform: scale(1.2);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+@keyframes "slide-in-left" {
+	from {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+@keyframes "zoom-in" {
+	from {
+		transform: scale(0.5);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+@keyframes "rotate-in" {
+	from {
+		transform: rotate(-180deg);
+		opacity: 0;
+	}
+	to {
+		transform: rotate(0);
+		opacity: 1;
+	}
+}
+&:root {
+	--animate-duration: 1s;
+	--animate-delay: 0.5s;
+	--main-bg-color: #f8f9fa;
+	--header-bg-color: #042d56;
+	--header-color: #fff;
+	--section-bg-color: #fff;
+	--section-shadow-color: rgba(0, 0, 0, 0.1);
+	--text-color: #343a40;
+	--link-color: #007bff;
+	--link-hover-color: #0056b3;
+	--font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+	font-family: var(--font-family);
+	margin: 0;
+	padding: 0;
+	background-color: var(--main-bg-color);
+}
+
+h1 {
+	margin-top: 15px;
+	font-size: 2em;
+	animation: slide-in-left var(--animate-duration) var(--animate-delay);
+}
+h2 {
+	color: var(--text-color);
+	font-size: 1.5em;
+	margin-bottom: 15px;
+}
+p {
+	color: var(--text-color);
+	font-size: 1.1em;
+	line-height: 1.6;
+}
+.proyectos {
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+}
+
+@import "landing.less";
+@import "header.less";
+@import "form.less";
+@import "footer.less";
